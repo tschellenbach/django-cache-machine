@@ -8,9 +8,9 @@ class CacheClass(memcached.CacheClass):
     def add(self, key, value, timeout=None, version=None):
         if timeout is None:
             timeout = self.default_timeout
-        return super(CacheClass, self).add(key, value, timeout, version)
+        return super(CacheClass, self).add(key, value, timeout)
 
     def set(self, key, value, timeout=None, version=None):
         if timeout is None:
             timeout = self.default_timeout
-        return super(CacheClass, self).set(key, value, timeout, version)
+        return super(CacheClass, self).set(key, value, timeout)
